@@ -7,8 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
-
   data = {
     title: 'hello'
   };
+
+  doBaby($event) {
+    console.log($event);
+  }
+
 }

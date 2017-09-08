@@ -1,3 +1,13 @@
-<div id="login" (click)="speak(123)">
+<div id="login" (click)="speak(123)" *ngIf="flag" >
   login component!
 </div>
+<button (click)="doFlag($event)">ok</button>
+<ul>
+  <li *ngFor="let item of list;let i = index" class="{{item.id}}" (click)="selectItem(i)" [ngClass]="{'active' : list[i].c}" [ngStyle]="{ 'color' : color}">{{ item.name }}{{ i }}</li>
+</ul>
+<div #loginBaby (click)="operate()">hello world!!!</div>
+<form action="">
+  <input type="text" required>
+  <p>{{ date }}</p>
+  <p>{{ date | date:'y年M月d日' }}</p>
+</form>
